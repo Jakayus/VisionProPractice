@@ -13,6 +13,7 @@
 		DC4CCF4D2B4E61EB00EF97B3 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CCF4C2B4E61EB00EF97B3 /* ImmersiveView.swift */; };
 		DC4CCF4F2B4E61EC00EF97B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4CCF4E2B4E61EC00EF97B3 /* Assets.xcassets */; };
 		DC4CCF522B4E61EC00EF97B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4CCF512B4E61EC00EF97B3 /* Preview Assets.xcassets */; };
+		DC4CCF672B4E783300EF97B3 /* box.dae in Resources */ = {isa = PBXBuildFile; fileRef = DC4CCF662B4E783300EF97B3 /* box.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DC4CCF4E2B4E61EC00EF97B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4CCF512B4E61EC00EF97B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC4CCF532B4E61EC00EF97B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4CCF662B4E783300EF97B3 /* box.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = box.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				DC4CCF482B4E61EB00EF97B3 /* VisionA1App.swift */,
 				DC4CCF4A2B4E61EB00EF97B3 /* ContentView.swift */,
 				DC4CCF4C2B4E61EB00EF97B3 /* ImmersiveView.swift */,
+				DC4CCF662B4E783300EF97B3 /* box.dae */,
 				DC4CCF4E2B4E61EC00EF97B3 /* Assets.xcassets */,
 				DC4CCF532B4E61EC00EF97B3 /* Info.plist */,
 				DC4CCF502B4E61EC00EF97B3 /* Preview Content */,
@@ -145,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4CCF672B4E783300EF97B3 /* box.dae in Resources */,
 				DC4CCF522B4E61EC00EF97B3 /* Preview Assets.xcassets in Resources */,
 				DC4CCF4F2B4E61EC00EF97B3 /* Assets.xcassets in Resources */,
 			);
