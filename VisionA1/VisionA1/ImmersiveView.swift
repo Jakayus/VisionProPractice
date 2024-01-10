@@ -12,10 +12,15 @@ import RealityKitContent
 struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
-                content.add(scene)
+            
+            // add 3D scene
+            
+            // create an entity and entity model
+            // model for USDZ type files include two children
+            if let boxModel = try? await Entity(named: "box"), let box = boxModel.children.first?.children.first {
+                content.add(box)
             }
+            
         }
     }
 }
