@@ -18,6 +18,8 @@ struct ImmersiveView: View {
             // create an entity and entity model
             // model for USDZ type files include two children
             if let boxModel = try? await Entity(named: "box"), let box = boxModel.children.first?.children.first {
+                box.position.y = 0.5
+                box.position.z = -1
                 content.add(box)
             }
             
