@@ -13,6 +13,7 @@ struct VisionA1App: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(width: 150, height: 150)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
