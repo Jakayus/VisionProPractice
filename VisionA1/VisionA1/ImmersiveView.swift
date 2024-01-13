@@ -49,7 +49,10 @@ struct ImmersiveView: View {
             /// create an entity and entity model
         
             // model for USDZ type files include two children
-            if let boxModel = try? await Entity(named: "box"), let box = boxModel.children.first?.children.first {
+            if let boxModel = try? await Entity(named: "box"),
+                let box = boxModel.children.first?.children.first,
+                let environment = try? await EnvironmentResource(named: "hdrsample"){
+                
                 // positioning
                 box.position.y = 0.5
                 box.position.z = -1
@@ -58,6 +61,10 @@ struct ImmersiveView: View {
                 
                 box.generateCollisionShapes(recursive: false)
                 box.components.set(InputTargetComponent())
+                
+                box.components.set(ImageBasedLightComponent(source: .single(environment))) // add environment
+                box.components.set(ImageBasedLightReceiverComponent(imageBasedLight: box)) // pick out the entity
+                box.components.set(GroundingShadowComponent(castsShadow: true)) // cast a shadow
                 
                 box.components[PhysicsBodyComponent.self] = .init(
                     massProperties: .default,
