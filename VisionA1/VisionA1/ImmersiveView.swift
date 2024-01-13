@@ -10,6 +10,23 @@ import RealityKit
 import RealityKitContent
 
 struct ImmersiveView: View {
+    
+    var dragGesture: some Gesture {
+        DragGesture()
+            .targetedToAnyEntity() // target to any entity
+            
+            // handling when object is moving
+            .onChanged({ value in
+                value.entity.position = value.convert(value.location3D, from: .local, to: value.entity.parent!)
+                value.entity.components[PhysicsBodyComponent.self]?.mode = .kinematic
+            })
+            
+            // handling when an object STOPS moving
+            .onEnded { value in
+                value.entity.components[PhysicsBodyComponent.self]?.mode = .dynamic
+            }
+    }
+    
     var body: some View {
         RealityView { content in
             
@@ -52,7 +69,8 @@ struct ImmersiveView: View {
                 content.add(box)
             }
             
-        }
+        } // end RealityView
+        .gesture(dragGesture)
     }
 }
 
